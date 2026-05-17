@@ -89,12 +89,15 @@ Set-Service -Name sshd -StartupType Automatic</code></pre>
     <pre><code>New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" `
   -Name "DefaultShell" `
   -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" `
-  -PropertyType String -Force</code></pre>
+  -PropertyType String -Force</code></pre
+    <img src="assets/defaultshell-registry.png" alt="PowerShell output showing DefaultShell registry key created">
 
     <h3>3.2 Locate SSH logs in Event Viewer</h3>
     <p>
       I confirmed that SSH events were being written to:
     </p>
+    <img src="assets/eventviewer-openssh.png" alt="Event Viewer showing OpenSSH Operational log">
+
     <ul>
       <li><strong>Event Viewer</strong> → <strong>Applications and Services Logs</strong> → <strong>OpenSSH</strong> → <strong>Operational</strong></li>
     </ul>
