@@ -282,6 +282,7 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
 </main>
 
 <script>
+  /* Scroll Spy */
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".top-nav a");
 
@@ -302,18 +303,6 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
       if (link.getAttribute("href") === "#" + current) {
         link.classList.add("active");
       }
-    });
-  });
-</script>
-
-<!-- ⭐ INSERT THIS HERE — Stagger Index Script -->
-<script>
-  const sectionGroups = document.querySelectorAll("section");
-
-  sectionGroups.forEach(section => {
-    const elements = section.querySelectorAll(".fade-in");
-    elements.forEach((el, index) => {
-      el.style.setProperty("--i", index);
     });
   });
 </script>
@@ -340,13 +329,13 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
     appearOnScroll.observe(el);
   });
 
-  // ⭐ Optional Fix #3 — helps with slow-loading images
+  // Optional: helps with slow-loading images
   setTimeout(() => {
     window.dispatchEvent(new Event("scroll"));
   }, 50);
 </script>
 
-<!-- 2. Assign stagger indexes -->
+<!-- 2. Assign stagger indexes AFTER fade-in classes exist -->
 <script>
   const sectionGroups = document.querySelectorAll("section");
 
@@ -358,12 +347,9 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
   });
 </script>
 
-  // ⭐ Force initial check so above-the-fold sections become visible
-  window.dispatchEvent(new Event("scroll"));
-</script>
-
 <button id="backToTop">↑ Top</button>
 
+<!-- Back to Top -->
 <script>
   const backToTop = document.getElementById("backToTop");
 
