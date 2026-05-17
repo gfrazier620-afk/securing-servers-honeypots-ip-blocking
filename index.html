@@ -298,5 +298,27 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
   });
 </script>
 
+<script>
+  // Fade-in on scroll
+  const faders = document.querySelectorAll("section, img, pre, figure");
+
+  const appearOptions = {
+    threshold: 0.15
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(el => {
+    el.classList.add("fade-in");
+    appearOnScroll.observe(el);
+  });
+</script>
+
 </body>
 </html>
