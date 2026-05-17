@@ -315,6 +315,18 @@ pre code {
   font-weight: 600;
 }
 
+/* Scroll Progress Bar */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  z-index: 9999;
+  transition: width 0.15s ease-out;
+}
+
 /* Standardize all images */
 section img {
   width: 100%;
