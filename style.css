@@ -12,6 +12,7 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
+  margin-left: 260px; /* bump this slightly */
 }
 
 /* Headings */
@@ -140,4 +141,18 @@ a:hover {
 /* Push main content right so TOC doesn't overlap */
 main {
   margin-left: 240px;
+}
+
+.toc {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  width: 200px;
+  background: #111827;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 999; /* <-- THIS is the important part */
 }
