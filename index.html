@@ -7,19 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="toc">
-  <h3>Contents</h3>
+<nav class="top-nav">
   <ul>
-    <li><a href="#overview">1. Overview</a></li>
-    <li><a href="#install-openssh">2. Installing OpenSSH</a></li>
-    <li><a href="#logging">3. Logging Configuration</a></li>
-    <li><a href="#simulate-attack">4. Simulated Attack</a></li>
-    <li><a href="#detect-logs">5. Detecting the Attack</a></li>
-    <li><a href="#mitigation">6. Mitigation</a></li>
-    <li><a href="#validation">7. Validation</a></li>
-    <li><a href="#summary">8. Final Summary</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#install-openssh">Install</a></li>
+    <li><a href="#logging">Logging</a></li>
+    <li><a href="#simulate-attack">Attack</a></li>
+    <li><a href="#detect-logs">Detection</a></li>
+    <li><a href="#mitigation">Mitigation</a></li>
+    <li><a href="#validation">Validation</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>    
+   
 <main>
   <header>
     <div class="section-label">Unit 2 Project</div>
@@ -283,13 +283,13 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
 
 <script>
   const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".toc a");
+  const navLinks = document.querySelectorAll(".top-nav a");
 
   window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 80;
+      const sectionTop = section.offsetTop - 120;
       const sectionHeight = section.clientHeight;
 
       if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
