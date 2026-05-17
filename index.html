@@ -57,11 +57,14 @@
     <h3>2.2 Install OpenSSH Server</h3>
     <p>I installed the OpenSSH Server capability with:</p>
     <pre><code>Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0</code></pre>
+    <img src="assets/openssh-install.png" alt="PowerShell output showing OpenSSH Server installation">
+
 
     <h3>2.3 Start and enable the SSH service</h3>
     <p>After installation, I started the SSH daemon and configured it to start automatically:</p>
     <pre><code>Start-Service sshd
 Set-Service -Name sshd -StartupType Automatic</code></pre>
+    <img src="assets/openssh-start.png" alt="PowerShell output showing SSH service started and configured to start automatically">
 
     <h3>2.4 Confirm service status</h3>
     <p>
@@ -70,6 +73,8 @@ Set-Service -Name sshd -StartupType Automatic</code></pre>
     <ul>
       <li>Status: <strong>Running</strong></li>
       <li>Startup Type: <strong>Automatic</strong></li>
+      <img src="assets/services-openssh-running.png" alt="Services window showing OpenSSH SSH Server running and set to Automatic">
+
     </ul>
   </section>
 
