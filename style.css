@@ -89,3 +89,55 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Floating Table of Contents */
+.toc {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  width: 200px;
+  background: #111827;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.toc h3 {
+  margin-top: 0;
+  color: #7bd8ff;
+  font-size: 1.1rem;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin-bottom: 0.5rem;
+}
+
+.toc a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.toc a:hover {
+  color: #7bd8ff;
+}
+
+/* Hide TOC on small screens */
+@media (max-width: 900px) {
+  .toc {
+    display: none;
+  }
+}
+
+/* Push main content right so TOC doesn't overlap */
+main {
+  margin-left: 240px;
+}
