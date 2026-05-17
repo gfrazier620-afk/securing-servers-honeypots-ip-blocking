@@ -315,16 +315,46 @@ pre code {
   font-weight: 600;
 }
 
-/* Scroll Progress Bar (under nav) */
+/* Shrinking Nav */
+.top-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  z-index: 9999;
+  padding: 0.75rem 0;
+  transition: padding 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.top-nav.shrink {
+  padding: 0.35rem 0;
+  background: #0b1220;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+.top-nav ul li a {
+  transition: font-size 0.25s ease, padding 0.25s ease;
+}
+
+.top-nav.shrink ul li a {
+  font-size: 0.85rem;
+  padding: 4px 6px;
+}
+
 #scrollProgress {
   position: fixed;
-  top: 60px; /* sits directly under your nav */
+  top: 60px; /* default nav height */
   left: 0;
   height: 4px;
   width: 0%;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
-  z-index: 9999;
-  transition: width 0.15s ease-out;
+  z-index: 9998;
+  transition: width 0.15s ease-out, top 0.25s ease;
+}
+
+.top-nav.shrink + #scrollProgress {
+  top: 40px; /* shrunk nav height */
 }
 
 /* Standardize all images */

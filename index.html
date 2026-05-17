@@ -321,6 +321,18 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
   });
 </script>
 
+<script>
+  const topNav = document.querySelector(".top-nav");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+      topNav.classList.add("shrink");
+    } else {
+      topNav.classList.remove("shrink");
+    }
+  });
+</script>
+
 <!-- 1. Add fade-in classes + observe -->
 <script>
   const faders = document.querySelectorAll("section, img, pre, figure, .section-divider");
