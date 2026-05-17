@@ -306,6 +306,19 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
   });
 </script>
 
+<!-- ⭐ INSERT THIS HERE — Stagger Index Script -->
+<script>
+  const sectionGroups = document.querySelectorAll("section");
+
+  sectionGroups.forEach(section => {
+    const elements = section.querySelectorAll(".fade-in");
+    elements.forEach((el, index) => {
+      el.style.setProperty("--i", index);
+    });
+  });
+</script>
+
+<!-- Fade-in Observer -->
 <script>
   // Fade-in on scroll
   const faders = document.querySelectorAll("section, img, pre, figure, .section-divider");
