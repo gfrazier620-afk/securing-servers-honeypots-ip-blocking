@@ -192,15 +192,22 @@ sshd: Failed password for sshlab from 192.168.1.216</code></pre>
     <h3>6.1 Open Windows Defender Firewall with Advanced Security</h3>
     <p>From PowerShell, I launched the advanced firewall console:</p>
     <pre><code>wf.msc</code></pre>
+    <img src="assets/wfmsc.png" alt="Windows Defender Firewall with Advanced Security console">
+
 
     <h3>6.2 Create a new inbound rule for SSH</h3>
     <ol>
       <li><strong>Inbound Rules</strong> → <strong>New Rule...</strong></li>
       <li>Select <strong>Port</strong></li>
+      <img src="assets/firewall-rule-type.png" alt="New Inbound Rule Wizard - Rule Type">
       <li>Protocol: <strong>TCP</strong>, Specific local ports: <strong>22</strong></li>
+      <img src="assets/firewall-protocol-ports.png" alt="New Inbound Rule Wizard - Protocol and Ports">
       <li>Action: <strong>Block the connection</strong></li>
+      <img src="assets/firewall-action.png" alt="New Inbound Rule Wizard - Block the connection">
       <li>Apply to: <strong>Domain</strong>, <strong>Private</strong>, and <strong>Public</strong> profiles</li>
+      <img src="assets/firewall-profile.png" alt="New Inbound Rule Wizard - Profile selection">
       <li>Name the rule: <strong>Block SSH from &lt;Attacker-IP&gt;</strong></li>
+      <img src="assets/firewall-name.png" alt="New Inbound Rule Wizard - Naming the rule">
     </ol>
 
     <h3>6.3 Scope the rule to the attacker IP</h3>
