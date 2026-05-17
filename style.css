@@ -202,3 +202,31 @@ html {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 14px;
+  font-size: 16px;
+  background: #1f2937;
+  color: #7bd8ff;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 999;
+}
+
+#backToTop:hover {
+  background: #111827;
+  transform: translateY(-3px);
+}
+
+#backToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
