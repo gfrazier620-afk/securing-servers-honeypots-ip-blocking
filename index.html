@@ -109,12 +109,15 @@ Set-Service -Name sshd -StartupType Automatic</code></pre>
     <h3>4.1 Successful SSH login</h3>
     <p>From the Kali attacker machine, I initiated an SSH connection to the honeypot:</p>
     <pre><code>ssh sshlab@192.168.1.216</code></pre>
+    <img src="assets/kali-login.png" alt="SSH connection attempt from Kali terminal">
     <p>When prompted, I entered the lab password:</p>
     <pre><code>P@ssw0rd123!</code></pre>
+    <img src="assets/kali-success-login.png" alt="Kali terminal showing password entry">
     <p>
       This resulted in a successful interactive PowerShell session on the Windows host, confirming that the honeypot
       was reachable and accepting credentials.
     </p>
+    <img src="assets/windows-success-session.png" alt="Kali terminal showing successful SSH session">
 
     <h3>4.2 Failed SSH login attempts</h3>
     <p>
