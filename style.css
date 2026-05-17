@@ -353,7 +353,7 @@ pre code {
   transition: width 0.15s ease-out, top 0.25s ease;
 }
 
-.top-nav.shrink + #scrollProgress {
+.top-nav.shrink ~ #scrollProgress {
   top: 40px; /* shrunk nav height */
 }
 
