@@ -230,3 +230,24 @@ html {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* Glowing Code Blocks */
+pre {
+  background: #0f172a; /* deep navy */
+  border: 1px solid #1e293b;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  position: relative;
+  box-shadow: 0 0 12px rgba(123, 216, 255, 0.15);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+pre:hover {
+  border-color: #7bd8ff;
+  box-shadow: 0 0 18px rgba(123, 216, 255, 0.35);
+}
+
+pre code {
+  text-shadow: 0 0 4px rgba(123, 216, 255, 0.3);
+}
