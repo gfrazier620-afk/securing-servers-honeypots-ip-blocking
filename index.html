@@ -216,8 +216,11 @@ sshd: Failed password for sshlab from 192.168.1.216</code></pre>
     </p>
     <ul>
       <li>Right-click the rule → <strong>Properties</strong> → <strong>Scope</strong></li>
+      <img src="assets/firewall-scope.png" alt="Firewall rule scope showing attacker IP added">
       <li>Under <strong>Remote IP address</strong>, select <strong>These IP addresses</strong></li>
       <li>Add the attacker IP, e.g. <code>192.168.1.216</code></li>
+      <img src="assets/firewall-scope-adip.png" alt="Firewall rule scope showing attacker IP added">
+
     </ul>
   </section>
 
@@ -232,6 +235,7 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
       The connection timeout confirmed that the firewall rule was effectively blocking SSH traffic from the attacker IP
       while the service remained running on the Windows host.
     </p>
+    <img src="assets/kali-blocked.png" alt="Kali SSH attempt showing connection timed out after firewall block">
   </section>
 
   <section id="summary">
