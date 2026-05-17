@@ -156,3 +156,9 @@ main {
   overflow-y: auto;
   z-index: 999; /* <-- THIS is the important part */
 }
+
+/* Active section highlight */
+.toc a.active {
+  color: #7bd8ff;
+  font-weight: 600;
+}
