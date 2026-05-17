@@ -162,3 +162,13 @@ main {
   color: #7bd8ff;
   font-weight: 600;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.toc a.active {
+  background: #1f2937;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
