@@ -318,16 +318,16 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
   });
 </script>
 
-<!-- Fade-in Observer -->
+<!-- 1. Add fade-in classes + observe -->
 <script>
-  // Fade-in on scroll
   const faders = document.querySelectorAll("section, img, pre, figure, .section-divider");
 
   const appearOptions = {
-    threshold: 0.15
+    rootMargin: "0px 0px -20% 0px",
+    threshold: 0
   };
 
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("visible");
@@ -339,6 +339,24 @@ ssh: connect to host 192.168.1.216 port 22: Connection timed out</code></pre>
     el.classList.add("fade-in");
     appearOnScroll.observe(el);
   });
+
+  // ⭐ Optional Fix #3 — helps with slow-loading images
+  setTimeout(() => {
+    window.dispatchEvent(new Event("scroll"));
+  }, 50);
+</script>
+
+<!-- 2. Assign stagger indexes -->
+<script>
+  const sectionGroups = document.querySelectorAll("section");
+
+  sectionGroups.forEach(section => {
+    const elements = section.querySelectorAll(".fade-in");
+    elements.forEach((el, index) => {
+      el.style.setProperty("--i", index);
+    });
+  });
+</script>
 
   // ⭐ Force initial check so above-the-fold sections become visible
   window.dispatchEvent(new Event("scroll"));
