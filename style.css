@@ -315,10 +315,10 @@ pre code {
   font-weight: 600;
 }
 
-/* Scroll Progress Bar */
+/* Scroll Progress Bar (under nav) */
 #scrollProgress {
   position: fixed;
-  top: 0;
+  top: 60px; /* sits directly under your nav */
   left: 0;
   height: 4px;
   width: 0%;
